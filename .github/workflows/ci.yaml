@@ -1,10 +1,14 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: hello
         run: |
           echo "hello ayush!"
+      - name: run Python script
+        run: |
+          pip install -r requirements.txt
+          python ci.py
