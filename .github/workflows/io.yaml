@@ -14,4 +14,4 @@ jobs:
         shell: python
       - name: print value of magic command
 #         if: steps.get-magic-value.outcome == 'success' && steps.get-magic-value.output.VAL == 'true'
-        run: echo "the value is $${{ steps.set-var.output.VAL }}"
+        run: echo "the value is $${{ steps.set-var.outputs.VAL }}"
